@@ -3,10 +3,8 @@
     <div id="warp">
       <v-header></v-header>
       <v-content></v-content>
-      <router-view></router-view>
-      <div class="push"></div>
     </div>
-    <v-footer></v-footer>
+    <v-footer class="common_width"></v-footer>
   </div>
 </template>
 
@@ -25,30 +23,25 @@ export default {
 </script>
 
 <style>
-html,body{
+@font-face {
+  font-family: siyuan;
+  src: url('./assets/SourceHanSansCN-Normal.otf');
+}
+html,
+body {
   height: 100%;
   min-height: 100%;
   margin: 0;
+  background-color: #fff;
+  min-width: 1000px;
 }
-#app{
+#app {
   height: 100%;
 }
-#warp {
-  height: 100%;
-  min-height: 100%;
-  margin-bottom: -20px;
+.common_width {
+  width: 900px;
 }
-.tab {
-  display: flex;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-}
-.tab .tab-item {
-  flex: 1;
-  text-align: center;
-}
-.push{
-  height: 20px;
+::-webkit-scrollbar {
+  display: none;
 }
 </style>
